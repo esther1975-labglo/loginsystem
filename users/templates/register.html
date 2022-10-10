@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000");
+}
+</style></head>
+<body><
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<h2>Register</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" value="Register">
+</form>
+
+<a href="{% url 'login' %}"><button style = "color:DarkGreen">Back to login</button></a>
+{% endblock %}
+</body>
+</html>
+

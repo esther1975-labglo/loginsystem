@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000");
+}
+</style></head>
+<body><
+</head>
+<body><center>
+
+<h1>login form</h1>
+<form style = "color:green" method = "post">
+{% csrf_token %}
+user_name:<br>
+<input name="user_name">
+<br><br>
+password:<br>
+<input type="password" id="password" name="password" class="form-control" data-toggle="password">
+
+
+
+<button>Login</button><br><br>
+
+<a href = "http://127.0.0.1:8000/admin/loginlogout/registration/"><button style = "color:DarkRed">Back</button></a>
+</form></center>
+</body>
+</html>
+

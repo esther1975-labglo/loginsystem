@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000");
+}
+</style></head>
+<body><center>
+
+
+{% extends 'base.html' %}
+{% block content %}
+
+Hello, {{ user.username|default:'Guest' }}!
+<div>
+    {% if user.is_authenticated %}
+        
+        
+        <a href="{% url 'logout' %}"><button style = "color:Crimson">Logout</button></a><br><br>
+        <a href="{% url 'password_change' %}"><button style = "color:DarkGreen">Change password</button></a>
+    {% else %}
+        <a href="{% url 'login' %}"><button style = "color:DarkBlue">Login</button></a>
+    {% endif %}
+</div>
+{% endblock %}
+</center></body>
+</html>

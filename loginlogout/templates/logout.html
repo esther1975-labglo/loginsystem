@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<h1>logout form</h1>
+<form action="store_reg/" method = "post">
+{% csrf_token %}
+user_name:<br>
+<input name="user_name">
+<br><br>
+password:<br>
+<input name="password">
+<br><br>
+
+<button><a href = "http://127.0.0.1:8000/loginlogout/exit/">logout</a></button><br><br>
+</form>
+</body>
+</html>
